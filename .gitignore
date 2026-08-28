@@ -1,0 +1,54 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Build outputs
+dist/
+build/
+coverage/
+htmlcov/
+*.egg-info/
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa
+id_ed25519
+
+# Deployment artifacts and local runtime material
+.fordeploy/aws-backup/*
+!.fordeploy/aws-backup/.gitkeep
+!.fordeploy/aws-backup/README.md
+!.fordeploy/aws-backup/*.example
+*.tar
+*.tar.gz
+*.tgz
+docker_images/
+
+# Logs and temporary files
+*.log
+logs/
+tmp/
+temp/
+.DS_Store
+Thumbs.db
+
+# Editor and OS metadata
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+*.swp
+*.swo

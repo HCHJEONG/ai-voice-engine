@@ -1117,32 +1117,18 @@ Phase N 완료
 
 ## 12. 환경변수 초안
 
-```dotenv
-# Public URLs
-VITE_API_BASE_URL=http://localhost:8000
-VITE_LIVEKIT_URL=ws://localhost:7880
+환경변수의 실제 예시는 repository root의 `.env.example`을 기준으로 한다.
 
-# LiveKit server-side credentials
-LIVEKIT_URL=ws://livekit:7880
-LIVEKIT_API_KEY=devkey
-LIVEKIT_API_SECRET=replace-with-a-long-local-secret
+초기 변수 그룹은 다음 범위를 포함한다.
 
-# Database
-POSTGRES_DB=voice_engine
-POSTGRES_USER=voice_engine
-POSTGRES_PASSWORD=replace-with-a-local-password
-DATABASE_URL=postgresql+psycopg://voice_engine:replace-with-a-local-password@postgres:5432/voice_engine
-
-# Realtime model
-VOICE_PROVIDER=openai
-VOICE_MODEL=
-OPENAI_API_KEY=
-GOOGLE_API_KEY=
-
-# Application
-APP_ENV=development
-LOG_LEVEL=INFO
-```
+- Public browser URLs: `VITE_API_BASE_URL`, `VITE_LIVEKIT_URL`
+- LiveKit server-side credentials: `LIVEKIT_URL`, `LIVEKIT_API_KEY`,
+  `LIVEKIT_API_SECRET`
+- Database: `POSTGRES_DB`, `POSTGRES_USER`, `POSTGRES_PASSWORD`,
+  `DATABASE_URL`
+- Realtime model: `VOICE_PROVIDER`, `VOICE_MODEL`, `OPENAI_API_KEY`,
+  `GOOGLE_API_KEY`
+- Application: `APP_ENV`, `LOG_LEVEL`
 
 실제 provider와 model identifier는 구현 시점의 공식 SDK 문서를 확인한 후 설정한다. 특정 preview model name을 코드 기본값으로 영구 고정하지 않는다.
 
