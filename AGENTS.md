@@ -285,6 +285,10 @@ Phase N 완료
 
 - Start each task by checking repository status and existing changes.
 - Do not overwrite or delete user changes.
+- Do not run `git commit` or `git push` unless the user explicitly asks for that
+  specific action. The user normally commits and pushes manually.
+- At the end of code or documentation work, suggest a concise commit message
+  instead of committing.
 - After file edits, run relevant tests, lint, type checks, or endpoint/browser
   checks when feasible.
 - Run `git diff --check` at the end of each phase.

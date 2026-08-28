@@ -1099,6 +1099,9 @@ Codex는 다음 규칙을 지킨다.
 12. 사용자가 요청하지 않는 한 원격 push, 배포, 유료 인프라 생성은 하지 않는다.
 13. AWS 수동 배포 작업은 Caddy app gateway, ALB/ACM, LiveKit public endpoint,
     Bastion/private host 전송, clean clone image build 전략을 따른다.
+14. commit과 push는 사용자가 수동으로 수행한다. Codex는 사용자가 명시적으로
+    요청하지 않는 한 commit이나 push를 실행하지 않고, 작업 완료 보고에 추천
+    commit message만 제안한다.
 
 ### Phase 완료 보고 형식
 
@@ -1111,6 +1114,7 @@ Phase N 완료
 - 수동 확인 필요:
 - 알려진 한계:
 - 다음 Phase:
+- 추천 commit message:
 ```
 
 ---
